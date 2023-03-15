@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Lesson5" />
+        <module name="Ex3" />
+        <module name="Lesson8_Ex3" />
+        <module name="Lesson9" />
+        <module name="Lesson8" />
+        <module name="Ex2" />
+        <module name="Ex1" />
+        <module name="Lesson8_Ex4" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="17" />
+      <module name="demo1" target="17" />
+      <module name="fxmldemo" target="17" />
+      <module name="FXMLDemo" target="17" />
+      <module name="hellofx" target="11" />
+      <module name="Lesson5" target="17" />
+      <module name="session5" target="17" />
+      <module name="test" target="11" />
+      <module name="Test" target="17" />
+      <module name="Test2" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

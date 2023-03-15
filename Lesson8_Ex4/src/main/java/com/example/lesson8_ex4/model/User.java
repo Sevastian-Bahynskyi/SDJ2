@@ -1,0 +1,37 @@
+package com.example.lesson8_ex4.model;
+
+import java.io.Serializable;
+
+public class User implements Serializable
+{
+    private final String username;
+    private final String password;
+    private final Email email;
+
+    public User(String username, String password, Email email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Email getEmail() {
+        return email;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+}
