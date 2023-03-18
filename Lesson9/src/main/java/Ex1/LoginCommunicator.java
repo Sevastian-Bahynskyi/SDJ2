@@ -36,7 +36,7 @@ public class LoginCommunicator implements Runnable
                 Login login = gson.fromJson(json, Login.class);
 
                 System.out.println(login);
-                out.println(json);
+//                out.println(json);
                 broadcaster.broadcast(json);
             }
         }

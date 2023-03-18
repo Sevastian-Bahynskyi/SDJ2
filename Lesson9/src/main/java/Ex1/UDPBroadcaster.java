@@ -19,6 +19,7 @@ public class UDPBroadcaster {
         try(DatagramSocket socket = new DatagramSocket()) {
             byte[] content = message.getBytes();
             DatagramPacket packet = new DatagramPacket(content, content.length, group, port);
+            System.out.println("Sending " + message);
             socket.send(packet);
         }
     }

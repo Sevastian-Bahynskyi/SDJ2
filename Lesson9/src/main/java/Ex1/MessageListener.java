@@ -5,9 +5,11 @@ import jdk.net.NetworkPermission;
 import java.io.IOException;
 import java.net.*;
 import java.nio.channels.AsynchronousCloseException;
+import java.util.Enumeration;
 
 public class MessageListener implements Runnable
 {
+    private final InetAddress group;
     private MulticastSocket multicastSocket;
     private InetSocketAddress socketAddress;
     private NetworkInterface networkInterface;
@@ -15,8 +17,8 @@ public class MessageListener implements Runnable
     public MessageListener(LoginClientImplementation client, String groupAddress, int port) throws IOException
     {
         this.client = client;
-        multicastSocket = new MulticastSocket();
-        InetAddress group = InetAddress.getByName(groupAddress);
+        multicastSocket = new MulticastSocket(port);
+        group = InetAddress.getByName(groupAddress);
         socketAddress = new InetSocketAddress(group, port);
         networkInterface = NetworkInterface.getByInetAddress(group);
     }

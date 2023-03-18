@@ -52,8 +52,7 @@ public class LoginClientImplementation implements LoginClient
 
     public void receiveBroadcast(String message) throws IOException
     {
-        String loginJson = in.readLine();
-        Login login = gson.fromJson(loginJson, Login.class);
+        Login login = gson.fromJson(message, Login.class);
         System.out.println(message);
         support.firePropertyChange("login", null, login);
     }
